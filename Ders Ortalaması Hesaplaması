@@ -1,0 +1,42 @@
+//Kullanıcıdan ad-soyad,ders adı,vize1,vize2 ve final notu alıp ortalamasını hesaplama (Ortalaam 60 ın üzerindeyse geçti değilse kaldı bilgisi yazdırma)
+
+import java.util.Scanner;
+
+public class OrnekDers {
+
+	public static void main(String[] args) {
+
+		Scanner veriAl = new Scanner(System.in);
+
+		System.out.print("Adınızı girin: ");
+		String isim = veriAl.nextLine();
+
+		System.out.print("Soyadınızı girin: ");
+		String soyisim = veriAl.nextLine();
+
+		System.out.println("Dersin adını giriniz: ");
+		String dersIsmi = veriAl.nextLine();
+
+		System.out.println("vize1 notunuz: ");
+		double vize1 = veriAl.nextDouble();
+
+		System.out.println("vize2 notunuz: ");
+		double vize2 = veriAl.nextDouble();
+
+		System.out.println("final notunuz: ");
+		double finalnot = veriAl.nextDouble();
+
+		double sonuc = (vize1 * 0.3 + vize2 * 0.3 + finalnot * 0.3);
+
+		if (sonuc >= 60) {
+			System.out.println("tebrikler " + isim + " " + soyisim + " " + dersIsmi + " dersinden" + " " + sonuc
+					+ " ortalama ile geçtiniz:))");
+		}
+
+		else {
+			System.out.println("basarısız");
+		}
+
+	}
+
+}
