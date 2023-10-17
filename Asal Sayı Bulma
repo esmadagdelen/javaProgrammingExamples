@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class LoopsExample {
+
+	public static void main(String[] args) {
+System.out.println("bir sayı giriniz: ");
+		
+		Scanner scanner=new Scanner(System.in);
+		int sayi=scanner.nextInt();
+		
+		boolean AsalMi=false;
+		
+		for(int i=2;i<sayi;i++)
+		{
+			if(sayi%i==0)
+			{
+				AsalMi=false;
+				break;
+			}
+			else {
+				AsalMi=true;
+			}
+		}
+		if(AsalMi)
+		{
+			System.out.println("Asal sayıdır");
+		}else {
+			System.out.println("asal degildir");
+		}
+	}
+
+}
